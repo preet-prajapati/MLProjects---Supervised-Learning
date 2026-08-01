@@ -1,0 +1,8 @@
+total=23
+count=2
+CELL 9 SyntaxError: unterminated string literal (detected at line 2) (<cell 9>, line 2)
+print('Shape:', df.shape)\nprint('\nColumns:')\nprint(df.columns.tolist())\nprint('\nData types:')\nprint(df.dtypes)\nprint('\nDiagnosis value counts:')\nprint(df['diagnosis'].value_counts())\nprint('\nMissing values:')\nprint(df.isnull().sum())\nprint('\nDuplicates:')\nprint(df.duplicated().sum())\n
+---
+CELL 45 SyntaxError: unterminated string literal (detected at line 12) (<cell 45>, line 12)
+accuracy = accuracy_score(y_test, y_pred)\nprecision = precision_score(y_test, y_pred)\nrecall = recall_score(y_test, y_pred)\nf1 = f1_score(y_test, y_pred)\nroc_auc = roc_auc_score(y_test, y_proba)\n\nprint(f'Accuracy: {accuracy:.4f}')\nprint(f'Precision: {precision:.4f}')\nprint(f'Recall: {recall:.4f}')\nprint(f'F1 Score: {f1:.4f}')\nprint(f'ROC AUC: {roc_auc:.4f}')\nprint('\nClassification Report:')\nprint(classification_report(y_test, y_pred, target_names=['Benign', 'Malignant']))\n
+---
