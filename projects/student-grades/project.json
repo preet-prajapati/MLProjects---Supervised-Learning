@@ -1,0 +1,9 @@
+{
+  "title": "Student Grade Classification",
+  "task": "classification",
+  "target": "GradeClass",
+  "dataset": "students.csv",
+  "model": "Logistic regression",
+  "objective": "Classify five recorded grade categories using non-GPA attributes.",
+  "limitations": "GPA is excluded as a direct outcome proxy. This is multiclass grade classification, not pass/fail prediction. Data provenance and timing of predictors need verification."
+}

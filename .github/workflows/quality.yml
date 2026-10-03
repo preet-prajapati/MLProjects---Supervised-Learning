@@ -1,0 +1,52 @@
+name: Portfolio quality
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.11', '3.12']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+      - run: python -m pip install -r requirements-dev.txt
+      - run: ruff check src tests scripts
+      - run: ruff format --check src tests scripts
+      - run: pytest -q
+      - run: python scripts/check_notebooks.py
+      - name: Execute bundled projects from fresh kernels
+        if: matrix.python-version == '3.12'
+        run: python scripts/check_notebooks.py --execute bundled
+      - uses: actions/upload-artifact@v4
+        if: always() && matrix.python-version == '3.12'
+        with:
+          name: verified-notebooks-and-reports
+          path: reports/
+
+  housing:
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: python -m pip install -r requirements.txt
+      - run: python -m ml_portfolio download-housing
+      - run: python scripts/check_notebooks.py --execute california-housing
+      - uses: actions/upload-artifact@v4
+        with:
+          name: housing-validation
+          path: reports/

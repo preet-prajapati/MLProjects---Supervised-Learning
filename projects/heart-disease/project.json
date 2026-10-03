@@ -1,0 +1,9 @@
+{
+  "title": "Heart Disease Classification",
+  "task": "classification",
+  "target": "target",
+  "dataset": "heart.csv",
+  "model": "k-nearest neighbors",
+  "objective": "Classify the recorded binary heart-disease target.",
+  "limitations": "Repeated records are removed before splitting. Patient identifiers and external validation are unavailable; this is not a diagnostic tool."
+}

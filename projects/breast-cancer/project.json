@@ -1,0 +1,9 @@
+{
+  "title": "Breast Cancer Classification",
+  "task": "classification",
+  "target": "diagnosis",
+  "dataset": "breast_cancer.csv",
+  "model": "Support vector classifier",
+  "objective": "Classify benign and malignant records from numeric cell measurements.",
+  "limitations": "Small benchmark dataset without prospective validation. Malignant is the positive class. This is an educational model, not a medical device."
+}

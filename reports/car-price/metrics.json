@@ -1,0 +1,47 @@
+{
+  "project": "car-price",
+  "title": "Car Price Prediction",
+  "task": "regression",
+  "model": "Linear regression",
+  "seed": 42,
+  "test_fraction": 0.2,
+  "training_rows": 151,
+  "test_rows": 38,
+  "data": {
+    "raw_rows": 205,
+    "invalid_rows_removed": 0,
+    "exact_duplicates_removed": 0,
+    "conflicting_rows_removed": 16,
+    "usable_rows": 189,
+    "feature_count": 24,
+    "sha256": "2d180da826cd6acca256c4e797beac0aae5b4b37fbb774afc1b90ae8319c5b65"
+  },
+  "cv_folds": 3,
+  "cv_scoring": "neg_root_mean_squared_error",
+  "cv_best_score": -4466.668331214068,
+  "cv_score_std": 978.4314719335638,
+  "best_parameters": {},
+  "test_metrics": {
+    "mae": 1661.3570952883122,
+    "rmse": 2339.165231425148,
+    "r2": 0.9031789794695366
+  },
+  "baseline_metrics": {
+    "mae": 5921.777623562218,
+    "rmse": 7530.52710290143,
+    "r2": -0.0034566318490225623
+  },
+  "training_metrics": {
+    "mae": 1074.9456670543514,
+    "rmse": 1470.8856101770302,
+    "r2": 0.963706259547196
+  },
+  "versions": {
+    "numpy": "2.2.6",
+    "pandas": "2.2.3",
+    "scikit-learn": "1.6.1",
+    "scipy": "1.15.2"
+  },
+  "python": "3.12.14",
+  "limitations": "Small historical sample; currency and collection period are not verified. Predictions do not represent current market quotes."
+}

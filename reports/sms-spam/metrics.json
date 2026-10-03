@@ -1,0 +1,87 @@
+{
+  "project": "sms-spam",
+  "title": "SMS Spam Detection",
+  "task": "classification",
+  "model": "Multinomial Naive Bayes",
+  "seed": 42,
+  "test_fraction": 0.2,
+  "training_rows": 4126,
+  "test_rows": 1032,
+  "data": {
+    "raw_rows": 5572,
+    "invalid_rows_removed": 0,
+    "exact_duplicates_removed": 414,
+    "conflicting_rows_removed": 0,
+    "usable_rows": 5158,
+    "feature_count": 1,
+    "sha256": "440e6ea9fa825578abfdd7b7932ef8393d72ef86c0c33f64676705ce40b1dfc2"
+  },
+  "cv_folds": 3,
+  "cv_scoring": "f1_macro",
+  "cv_best_score": 0.9633387235443829,
+  "cv_score_std": 0.012050128603099265,
+  "best_parameters": {
+    "model__alpha": 0.1,
+    "vectorizer__ngram_range": [
+      1,
+      2
+    ]
+  },
+  "test_metrics": {
+    "accuracy": 0.9874031007751938,
+    "macro_f1": 0.9711110489040674,
+    "precision": 0.9457364341085271,
+    "recall": 0.953125,
+    "f1": 0.9494163424124513,
+    "roc_auc": 0.9800280005530972
+  },
+  "baseline_metrics": {
+    "accuracy": 0.875968992248062,
+    "macro_f1": 0.4669421487603306,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0
+  },
+  "training_metrics": {
+    "accuracy": 0.9992729035385362,
+    "macro_f1": 0.9983373743813005,
+    "precision": 0.9941972920696325,
+    "recall": 1.0,
+    "f1": 0.997090203685742
+  },
+  "versions": {
+    "numpy": "2.2.6",
+    "pandas": "2.2.3",
+    "scikit-learn": "1.6.1",
+    "scipy": "1.15.2"
+  },
+  "python": "3.12.14",
+  "limitations": "Exact repeated messages are removed before splitting. Related templates can still cross partitions; language and campaign drift limit deployment.",
+  "classification_report": {
+    "0": {
+      "precision": 0.9933554817275747,
+      "recall": 0.9922566371681416,
+      "f1-score": 0.9928057553956835,
+      "support": 904.0
+    },
+    "1": {
+      "precision": 0.9457364341085271,
+      "recall": 0.953125,
+      "f1-score": 0.9494163424124513,
+      "support": 128.0
+    },
+    "accuracy": 0.9874031007751938,
+    "macro avg": {
+      "precision": 0.969545957918051,
+      "recall": 0.9726908185840708,
+      "f1-score": 0.9711110489040674,
+      "support": 1032.0
+    },
+    "weighted avg": {
+      "precision": 0.9874492432631967,
+      "recall": 0.9874031007751938,
+      "f1-score": 0.9874241227776082,
+      "support": 1032.0
+    }
+  }
+}

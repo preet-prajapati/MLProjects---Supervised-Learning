@@ -1,0 +1,5 @@
+params,mean_test_score,std_test_score,rank_test_score
+"{'model__alpha': 0.1, 'vectorizer__ngram_range': (1, 1)}",0.9610599898014582,0.009285865932317753,2
+"{'model__alpha': 0.1, 'vectorizer__ngram_range': (1, 2)}",0.9633387235443829,0.012050128603099265,1
+"{'model__alpha': 1.0, 'vectorizer__ngram_range': (1, 1)}",0.9584197194959027,0.008412394909273832,3
+"{'model__alpha': 1.0, 'vectorizer__ngram_range': (1, 2)}",0.9567793848363326,0.010366840925067683,4

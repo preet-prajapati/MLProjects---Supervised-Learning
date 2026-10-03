@@ -1,0 +1,9 @@
+{
+  "title": "California Housing Value Prediction",
+  "task": "regression",
+  "target": "MedHouseVal",
+  "dataset": "california_housing.csv",
+  "model": "Support vector regression",
+  "objective": "Estimate median district house value from census-derived attributes.",
+  "limitations": "Target units are $100,000 and values are capped. Random holdout is not a spatial or temporal generalization test. Historical census data do not describe current prices."
+}
