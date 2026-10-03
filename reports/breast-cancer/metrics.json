@@ -1,0 +1,84 @@
+{
+  "project": "breast-cancer",
+  "title": "Breast Cancer Classification",
+  "task": "classification",
+  "model": "Support vector classifier",
+  "seed": 42,
+  "test_fraction": 0.2,
+  "training_rows": 455,
+  "test_rows": 114,
+  "data": {
+    "raw_rows": 569,
+    "invalid_rows_removed": 0,
+    "exact_duplicates_removed": 0,
+    "conflicting_rows_removed": 0,
+    "usable_rows": 569,
+    "feature_count": 30,
+    "sha256": "27f219231dbb30eecbfc1361407ed641ea01be43316e2c707a1baf82c9795e23"
+  },
+  "cv_folds": 3,
+  "cv_scoring": "f1_macro",
+  "cv_best_score": 0.9671470342522973,
+  "cv_score_std": 0.006543612260166067,
+  "best_parameters": {
+    "model__C": 1.0,
+    "model__kernel": "linear"
+  },
+  "test_metrics": {
+    "accuracy": 0.9649122807017544,
+    "macro_f1": 0.9614864864864865,
+    "precision": 1.0,
+    "recall": 0.9047619047619048,
+    "f1": 0.95,
+    "roc_auc": 0.9914021164021164
+  },
+  "baseline_metrics": {
+    "accuracy": 0.631578947368421,
+    "macro_f1": 0.3870967741935484,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0
+  },
+  "training_metrics": {
+    "accuracy": 0.989010989010989,
+    "macro_f1": 0.9881894873458793,
+    "precision": 1.0,
+    "recall": 0.9705882352941176,
+    "f1": 0.9850746268656716
+  },
+  "versions": {
+    "numpy": "2.2.6",
+    "pandas": "2.2.3",
+    "scikit-learn": "1.6.1",
+    "scipy": "1.15.2"
+  },
+  "python": "3.12.14",
+  "limitations": "Small benchmark dataset without prospective validation. Malignant is the positive class. This is an educational model, not a medical device.",
+  "classification_report": {
+    "0": {
+      "precision": 0.9473684210526315,
+      "recall": 1.0,
+      "f1-score": 0.972972972972973,
+      "support": 72.0
+    },
+    "1": {
+      "precision": 1.0,
+      "recall": 0.9047619047619048,
+      "f1-score": 0.95,
+      "support": 42.0
+    },
+    "accuracy": 0.9649122807017544,
+    "macro avg": {
+      "precision": 0.9736842105263157,
+      "recall": 0.9523809523809523,
+      "f1-score": 0.9614864864864865,
+      "support": 114.0
+    },
+    "weighted avg": {
+      "precision": 0.966759002770083,
+      "recall": 0.9649122807017544,
+      "f1-score": 0.9645092460881936,
+      "support": 114.0
+    }
+  }
+}

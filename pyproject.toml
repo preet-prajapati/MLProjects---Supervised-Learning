@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "supervised-learning-portfolio"
+version = "1.0.0"
+description = "Seven reproducible supervised-learning case studies"
+requires-python = ">=3.11,<3.13"
+dependencies = [
+  "numpy==2.2.6", "pandas==2.2.3", "scikit-learn==1.6.1",
+  "matplotlib==3.10.1", "seaborn==0.13.2",
+  "scipy==1.15.2", "joblib==1.4.2", "threadpoolctl==3.6.0",
+]
+
+[project.scripts]
+ml-portfolio = "ml_portfolio.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I"]

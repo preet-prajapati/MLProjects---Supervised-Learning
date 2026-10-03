@@ -1,0 +1,50 @@
+{
+  "project": "california-housing",
+  "title": "California Housing Value Prediction",
+  "task": "regression",
+  "model": "Support vector regression",
+  "seed": 42,
+  "test_fraction": 0.2,
+  "training_rows": 16512,
+  "test_rows": 4128,
+  "data": {
+    "raw_rows": 20640,
+    "invalid_rows_removed": 0,
+    "exact_duplicates_removed": 0,
+    "conflicting_rows_removed": 0,
+    "usable_rows": 20640,
+    "feature_count": 8,
+    "sha256": "7192af0bf33e94141194cfd91958c62d66262dc40c07cc2e6fbe0b2d02b0e1b3"
+  },
+  "cv_folds": 3,
+  "cv_scoring": "neg_root_mean_squared_error",
+  "cv_best_score": -0.5688868522458513,
+  "cv_score_std": 0.0060683981300467035,
+  "best_parameters": {
+    "model__C": 10.0,
+    "model__epsilon": 0.2
+  },
+  "test_metrics": {
+    "mae": 0.379623858152659,
+    "rmse": 0.566809402459827,
+    "r2": 0.7548300537835564
+  },
+  "baseline_metrics": {
+    "mae": 0.9060685490007149,
+    "rmse": 1.1448563543099792,
+    "r2": -0.00021908714592466794
+  },
+  "training_metrics": {
+    "mae": 0.3600714218735986,
+    "rmse": 0.541180312820779,
+    "r2": 0.7809089582685905
+  },
+  "versions": {
+    "numpy": "2.2.6",
+    "pandas": "2.2.3",
+    "scikit-learn": "1.6.1",
+    "scipy": "1.15.2"
+  },
+  "python": "3.12.14",
+  "limitations": "Target units are $100,000 and values are capped. Random holdout is not a spatial or temporal generalization test. Historical census data do not describe current prices."
+}

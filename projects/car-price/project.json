@@ -1,0 +1,9 @@
+{
+  "title": "Car Price Prediction",
+  "task": "regression",
+  "target": "price",
+  "dataset": "cars.csv",
+  "model": "Linear regression",
+  "objective": "Estimate vehicle prices from specifications.",
+  "limitations": "Small historical sample; currency and collection period are not verified. Predictions do not represent current market quotes."
+}

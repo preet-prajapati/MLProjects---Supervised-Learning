@@ -1,0 +1,9 @@
+{
+  "title": "Medical Insurance Cost Prediction",
+  "task": "regression",
+  "target": "charges",
+  "dataset": "insurance.csv",
+  "model": "Decision tree",
+  "objective": "Estimate recorded insurance charges from demographic and lifestyle attributes.",
+  "limitations": "Charges are observational and highly skewed. This is not an underwriting or individual pricing tool."
+}

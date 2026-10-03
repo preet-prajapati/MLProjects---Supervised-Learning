@@ -1,0 +1,91 @@
+{
+  "project": "student-grades",
+  "title": "Student Grade Classification",
+  "task": "classification",
+  "model": "Logistic regression",
+  "seed": 42,
+  "test_fraction": 0.2,
+  "training_rows": 1913,
+  "test_rows": 479,
+  "data": {
+    "raw_rows": 2392,
+    "invalid_rows_removed": 0,
+    "exact_duplicates_removed": 0,
+    "conflicting_rows_removed": 0,
+    "usable_rows": 2392,
+    "feature_count": 12,
+    "sha256": "211b5cc8fb656bcaf96f6badefd2bd0f2700f8c329f7666a8c93cacd68ce8ce9"
+  },
+  "cv_folds": 3,
+  "cv_scoring": "f1_macro",
+  "cv_best_score": 0.47789824215552495,
+  "cv_score_std": 0.016895451161864694,
+  "best_parameters": {
+    "model__C": 10.0
+  },
+  "test_metrics": {
+    "accuracy": 0.7139874739039666,
+    "macro_f1": 0.5424594646105865
+  },
+  "baseline_metrics": {
+    "accuracy": 0.5073068893528184,
+    "macro_f1": 0.13462603878116344
+  },
+  "training_metrics": {
+    "accuracy": 0.7449032932566649,
+    "macro_f1": 0.5872025826350991
+  },
+  "versions": {
+    "numpy": "2.2.6",
+    "pandas": "2.2.3",
+    "scikit-learn": "1.6.1",
+    "scipy": "1.15.2"
+  },
+  "python": "3.12.14",
+  "limitations": "GPA is excluded as a direct outcome proxy. This is multiclass grade classification, not pass/fail prediction. Data provenance and timing of predictors need verification.",
+  "classification_report": {
+    "0": {
+      "precision": 0.38461538461538464,
+      "recall": 0.23809523809523808,
+      "f1-score": 0.29411764705882354,
+      "support": 21.0
+    },
+    "1": {
+      "precision": 0.5116279069767442,
+      "recall": 0.4074074074074074,
+      "f1-score": 0.4536082474226804,
+      "support": 54.0
+    },
+    "2": {
+      "precision": 0.4948453608247423,
+      "recall": 0.6153846153846154,
+      "f1-score": 0.5485714285714286,
+      "support": 78.0
+    },
+    "3": {
+      "precision": 0.5507246376811594,
+      "recall": 0.4578313253012048,
+      "f1-score": 0.5,
+      "support": 83.0
+    },
+    "4": {
+      "precision": 0.8910505836575876,
+      "recall": 0.9423868312757202,
+      "f1-score": 0.916,
+      "support": 243.0
+    },
+    "accuracy": 0.7139874739039666,
+    "macro avg": {
+      "precision": 0.5665727747511237,
+      "recall": 0.5322210834928371,
+      "f1-score": 0.5424594646105865,
+      "support": 479.0
+    },
+    "weighted avg": {
+      "precision": 0.7025849790278229,
+      "recall": 0.7139874739039666,
+      "f1-score": 0.7046928755274143,
+      "support": 479.0
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "title": "SMS Spam Detection",
+  "task": "classification",
+  "target": "label",
+  "dataset": "spam.csv",
+  "model": "Multinomial Naive Bayes",
+  "objective": "Identify spam messages while measuring missed spam and false alarms.",
+  "limitations": "Exact repeated messages are removed before splitting. Related templates can still cross partitions; language and campaign drift limit deployment."
+}
