@@ -5,4 +5,5 @@
 *.toml text eol=lf
 *.ipynb text eol=lf
 *.csv -text
+reports/**/*.csv text eol=lf
 *.png binary
